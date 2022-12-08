@@ -16,12 +16,10 @@ class UserSignupForm(forms.ModelForm):
             # Additional fields for candidate profiles:
             'profile_bio',
             'skills',
-            'github_username',
             'years_of_experience',
             'education',
             # Additional fields for recruiter profiles:
             'company_name',
-            'company_website',
         ]
 
     def __init__(self, *args, **kwargs):
@@ -39,7 +37,6 @@ class UserSignupForm(forms.ModelForm):
                 ('password', self.fields['password']),
                 ('profile_bio', self.fields['profile_bio']),
                 ('skills', self.fields['skills']),
-                ('github_username', self.fields['github_username']),
                 ('years_of_experience', self.fields['years_of_experience']),
                 ('education', self.fields['education']),
             ])
