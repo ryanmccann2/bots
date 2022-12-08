@@ -28,3 +28,7 @@ class User(models.Model):
 
     def __str__(self):
         return self.identifier
+
+# class Post(models.Model):
+#     position_title = models.models.CharField(max_length=50)
+#     type = 
