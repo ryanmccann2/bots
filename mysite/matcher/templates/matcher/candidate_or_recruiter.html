@@ -1,0 +1,17 @@
+<!-- templates/matcher/candidate_or_recruiter.html -->
+{% extends "matcher/base.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<h2>Candidate or Recruiter?</h2>
+{% comment %} <form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  
+  <button type="submit"><a href="{% url 'login' %}">Next</a></button>
+</form> {% endcomment %}
+<button type="submit"><a href="{% url 'recruiterlogin' %}">Recruiter Login</a></button>
+<button type="submit"><a href="{% url 'candidatelogin' %}">Candidate Login</a></button>
+
+{% endblock %}
