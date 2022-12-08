@@ -16,7 +16,6 @@ class User(models.Model):
     profile_bio = models.TextField(max_length=200, blank=True)
     zip_code = models.CharField(max_length=10)
     skills = models.TextField(max_length=50)
-    github_username = models.CharField(max_length=100, blank=True)
     years_of_experience = models.PositiveIntegerField()
     education = models.CharField(max_length=100, blank=True)
     username = models.CharField(max_length=100, unique=True)
@@ -24,7 +23,6 @@ class User(models.Model):
 
     # Additional fields for recruiter profiles:
     company_name = models.CharField(max_length=100, null=True, blank=True)
-    company_website = models.URLField(null=True, blank=True)
 
     def __str__(self):
         return self.identifier
