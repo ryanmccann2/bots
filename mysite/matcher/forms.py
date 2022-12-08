@@ -61,3 +61,10 @@ class UserLoginForm(forms.ModelForm):
             'username',
             'password',
         ]
+
+class CandidateOrRecruiterForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = [
+            'profile_type'
+        ]
